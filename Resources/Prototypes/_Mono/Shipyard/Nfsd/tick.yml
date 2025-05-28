@@ -1,0 +1,36 @@
+  #Author Info
+  #Discord: roostercat
+  #github: Roostercat12
+#
+- type: vessel
+  id: Tick
+  parent: BaseVesselAntag
+  name: TSF-SKR Tick
+  description: A small attack shuttle designed for smaller short-term operations. Armed with Autocannons and EMP launchers.
+  price: 25000
+  category: Small
+  group: Security
+  access: Security
+  shuttlePath: /Maps/_Mono/Shuttles/Nfsd/tick.yml
+  guidebookPage: Null
+  class:
+  - Patrol
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Tick
+  mapName: 'Tick'
+  mapPath: /Maps/_Mono/Shuttles/Nfsd/tick.yml
+  minPlayers: 0
+  stations:
+    Dagger:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Tick TSF{1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs: {}
