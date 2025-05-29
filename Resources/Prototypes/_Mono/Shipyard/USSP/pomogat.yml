@@ -1,0 +1,40 @@
+#Author Info
+#Discord: roostercat
+#Github: Roostercat12
+
+
+- type: vessel
+  id: Pomogat
+  parent: BaseVesselAntag
+  name: NCS Pomogat
+  description: A small medical ship with a cryotube, stasis beds and a techfab.
+  price: 35000
+  category: small
+  group: Ussp
+  access: USSP
+  shuttlePath: /Maps/_Mono/Shuttles/USSP/pomogat.yml
+  guidebookPage: Null
+  class:
+  - Medical
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Pomogat
+  mapName: 'Pomogat'
+  mapPath: /Maps/_Mono/Shuttles/USSP/pomogat.yml
+  minPlayers: 0
+  stations:
+    Pomogat:
+      stationProto: StandardFrontierVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Pomogat USSP{1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs:
+          USSPCorporal: [0, 0]
+          USSPMedic: [0, 0]
+          USSPRifleman: [0, 0]
